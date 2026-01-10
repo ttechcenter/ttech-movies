@@ -1,0 +1,110 @@
+/* ---------- TITLE CARDS SECTION ---------- */
+.title-cards {
+  margin: 10px 0;
+}
+
+/* Section Title */
+.title-cards h2 {
+  margin-bottom: 14px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* ---------- CARD LIST ---------- */
+.card-list {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+}
+
+.card-list::-webkit-scrollbar {
+  display: none;
+}
+
+/* ---------- CARD ---------- */
+.card {
+  position: relative;
+  min-width: 220px;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Image */
+.card img {
+  width: 100%;
+  height: 125px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Hover effect */
+.card:hover {
+  transform: scale(1.08);
+  z-index: 2;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+}
+
+/* ---------- CARD TITLE OVERLAY ---------- */
+.card p {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85),
+    transparent
+  );
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* Show title on hover */
+.card:hover p {
+  opacity: 1;
+  color: orange;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .card {
+    min-width: 200px;
+  }
+
+  .card img {
+    height: 115px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .title-cards {
+    padding-left: 4%;
+  }
+
+  .title-cards h2 {
+    font-size: 16px;
+  }
+
+  .card {
+    min-width: 160px;
+  }
+
+  .card img {
+    height: 95px;
+  }
+
+  .card p {
+    font-size: 11px;
+  }
+}
